@@ -2,7 +2,7 @@
 
 Its a maven project, Dependencies used in pom.xml --> Selenium-Java,TestNG and WebDriverManager
 
-Below are the Concepts implemented in the project 
+Below are the Concepts implemented in the project \
 1.Under **Page Object Model** package , 2 classes been created based on the validation where locators(xpath,id,etc) been passed through By abstract class
 2.TestNG
   -**Annotations** - BeforeClass ,AfterClass,DataProvider,Test
