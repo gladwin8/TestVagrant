@@ -14,6 +14,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -24,7 +25,7 @@ import resources.Base;
 public class EndtoEnd extends Base{
 
 	public WebDriver driver;
-	String SearchMovie="Pushpa: The Rise";
+	//String SearchMovie="Pushpa: The Rise";
 	@BeforeClass
 	public void InitializeBrowser()
 	{
@@ -35,18 +36,18 @@ public class EndtoEnd extends Base{
 		driver.manage().window().maximize();
 	}
 	
-	@Test
-	public void Imdb_Wiki_validation() throws Exception
+	@Test(dataProvider="getMovie")
+	public void Imdb_Wiki_validation(String SearchMovie) throws Exception
 	{
-		imdbValidation_homepage();
+		imdbValidation_homepage(SearchMovie);
 		HashMap<String,String> imdb_hashmap=imdbMovieValidation();
-		Wiki_Homepage();
+		Wiki_Homepage(SearchMovie);
 		HashMap<String,String> wiki_hashmap=Wiki_MovieValidation();
 		String imdb_Release_Details=imdb_hashmap.get("Release Details");
 		String wiki_Release_Details=wiki_hashmap.get("Release Details");
 		SoftAssert soft= new SoftAssert();
 		soft.assertEquals(imdb_Release_Details, wiki_Release_Details);
-		
+		soft.assertAll();
 		if(imdb_Release_Details.equalsIgnoreCase(wiki_Release_Details))
 			System.out.println(SearchMovie+" movie release date matches with imdb");
 		else
@@ -64,7 +65,7 @@ public class EndtoEnd extends Base{
 		
 	}
 	
-	public void imdbValidation_homepage() throws Exception
+	public void imdbValidation_homepage(String SearchMovie) throws Exception
 	{
 		Imdb imdb =new Imdb(driver);
 		boolean imdb_label=imdb.imdblabel().isDisplayed();
@@ -101,7 +102,7 @@ public class EndtoEnd extends Base{
 		return imdb_hashmap;
 	}
 	
-	public void Wiki_Homepage() {
+	public void Wiki_Homepage(String SearchMovie) {
 		String Wiki_URL=prop.getProperty("WikiURL");
 		driver.get(Wiki_URL);
 		Wikipedia wiki = new Wikipedia(driver);
@@ -138,4 +139,13 @@ public class EndtoEnd extends Base{
 		driver.close();
 	}
 	
+	@DataProvider
+	public Object[][] getMovie()
+	{
+		Object[][] data=new Object[1][1];
+		data[0][0]="Pushpa: The Rise";
+		
+				
+		return data;
+	}
 }
