@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-TestVagrant&#039;s_Code_Review">
-              <span class="suite-name border-passed">TestVagrant's Code Review</span>
+              <span class="suite-name border-failed">TestVagrant's Code Review</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-TestVagrant&#039;s_Code_Review" class="hide-methods passed suite-TestVagrant&#039;s_Code_Review"> (hide)</a> <!-- hide-methods passed suite-TestVagrant's_Code_Review -->
-                      <a href="#" panel-name="suite-TestVagrant&#039;s_Code_Review" class="show-methods passed suite-TestVagrant&#039;s_Code_Review"> (show)</a> <!-- show-methods passed suite-TestVagrant's_Code_Review -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestVagrant&#039;s_Code_Review" class="hide-methods failed suite-TestVagrant&#039;s_Code_Review"> (hide)</a> <!-- hide-methods failed suite-TestVagrant's_Code_Review -->
+                      <a href="#" panel-name="suite-TestVagrant&#039;s_Code_Review" class="show-methods failed suite-TestVagrant&#039;s_Code_Review"> (show)</a> <!-- show-methods failed suite-TestVagrant's_Code_Review -->
                     </span>
-                    <div class="method-list-content passed suite-TestVagrant&#039;s_Code_Review">
+                    <div class="method-list-content failed suite-TestVagrant&#039;s_Code_Review">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TestVagrant&#039;s_Code_Review" title="FunctionalLibraries.EndtoEnd" hash-for-method="Imdb_Wiki_validation">Imdb_Wiki_validation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-TestVagrant's_Code_Review -->
+                    </div> <!-- method-list-content failed suite-TestVagrant's_Code_Review -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TestVagrant&#039;s_Code_Review" class="panel TestVagrant&#039;s_Code_Review">
-          <div class="suite-TestVagrant&#039;s_Code_Review-class-passed">
+          <div class="suite-TestVagrant&#039;s_Code_Review-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">FunctionalLibraries.EndtoEnd</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,10 +128,35 @@
                   <a name="Imdb_Wiki_validation">
                   </a> <!-- Imdb_Wiki_validation -->
                   <span class="method-name">Imdb_Wiki_validation</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@id=&apos;home_img_holde&apos;]&quot;}
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;NEW&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [db1575df4c656d9827e44dc796be255e, findElement {using=xpath, value=//a[@id=&apos;home_img_holde&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:49540}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49540/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: db1575df4c656d9827e44dc796be255e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at pageObjects.Imdb.imdblabel(Imdb.java:34)
+	at FunctionalLibraries.EndtoEnd.imdbValidation_homepage(EndtoEnd.java:70)
+	at FunctionalLibraries.EndtoEnd.Imdb_Wiki_validation(EndtoEnd.java:41)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestVagrant's_Code_Review-class-passed -->
+          </div> <!-- suite-TestVagrant's_Code_Review-class-failed -->
         </div> <!-- panel TestVagrant's_Code_Review -->
         <div panel-name="test-xml-TestVagrant&#039;s_Code_Review" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -191,12 +216,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Imdb_Wiki_validation')
 data.setCell(0, 2, 'FunctionalLibraries.EndtoEnd')
-data.setCell(0, 3, 10456);
+data.setCell(0, 3, 120632);
 window.suiteTableData['TestVagrant's_Code_Review']= { tableData: data, tableDiv: 'times-div-TestVagrant's_Code_Review'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-TestVagrant&#039;s_Code_Review">
               </div> <!-- times-div-TestVagrant's_Code_Review -->
             </div> <!-- times-div -->
@@ -228,12 +253,14 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Imdb_Wiki_validation</span>
-                <span class="method-start">9530 ms</span>
+                <span class="method-start">9196 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">Browser_close</span>
-                <span class="method-start">19990 ms</span>
+                <span class="method-start">130572 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
