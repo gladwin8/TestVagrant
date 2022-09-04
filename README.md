@@ -22,6 +22,6 @@ The whole testflow is been controlled in EndtoEnd.java under Functionallibraries
     *Wiki_MovieValidation()* --> Similar to imdbMovieValidation method but happens in Wikipedia page and data stored in hashmap where it gets compared. \
 		
 ### Steps to clone execute the tests
-git clone https://github.com/gladwin8/TestVagrant
-cd TestVagrant
+git clone https://github.com/gladwin8/TestVagrant \
+cd TestVagrant \
 mvn clean test 
