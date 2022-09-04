@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestVagrant's Code Review">
+<listeners>
+<listener class-name="resources.Listeners"/>
+</listeners>
+  <test name="Imdb_Wikipedia_Validation">
+    <classes>
+      <class name="FunctionalLibraries.EndtoEnd"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

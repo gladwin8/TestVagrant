@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestVagrant&#039;s Code Review]">
+  <test name="Imdb_Wikipedia_Validation(failed)">
+    <classes>
+      <class name="FunctionalLibraries.EndtoEnd">
+        <methods>
+          <include name="InitializeBrowser"/>
+          <include name="Browser_close"/>
+          <include name="Imdb_Wiki_validation"/>
+        </methods>
+      </class> <!-- FunctionalLibraries.EndtoEnd -->
+    </classes>
+  </test> <!-- Imdb_Wikipedia_Validation(failed) -->
+</suite> <!-- Failed suite [TestVagrant's Code Review] -->
