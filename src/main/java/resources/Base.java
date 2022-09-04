@@ -69,11 +69,11 @@ public class Base {
 	{
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
-		String dest=System.getProperty("user.dir")+"\\reports\\" +testcaseName+timestamp()+ ".png";
+		String dest=System.getProperty("user.dir")+"//target//reports//" +timestamp()+ ".png";
 		FileUtils.copyFile(src, new File(dest));
 	}
 
-	private String timestamp() 
+	public static String timestamp() 
 	{
 		return new SimpleDateFormat("dd_mm_yyyy-hh-mm-ss").format(new Date());
 	}
