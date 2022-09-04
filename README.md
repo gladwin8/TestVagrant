@@ -13,7 +13,7 @@ Below are the Concepts implemented in the project \
 4. Common functionalities been listed out in method like **browserInitiation** , **getScreenshot** which is been declared in **Base** class under Resource package \
 5. Through Selenium with Java all the above libraries gets integrated and Under **EndtoEnd** class file selenium concepts like Driver initiation,Implicit,Explict wait,effectively handled auto suggestions drop down,data comparison,etc, \
 
-## Test Flow: \
+## Test Flow: 
 The whole testflow is been controlled in EndtoEnd.java under Functionallibraries package where Imdb_Wiki_validation method acts like main method  \
   -Each steps are listed in seperate method which creates a seperate flow for execution.Below are the methods , \
     *imdbValidation_homepage()* --> User navigates to IMDB url & Validate the label ; Navigate to the mentioned movie details \
